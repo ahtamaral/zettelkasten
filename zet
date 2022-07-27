@@ -14,8 +14,8 @@ fi
 echo "Zet title: $TITLE"
 
 mkdir -p $DIR
-touch $DIR/$timestamp
-echo "# $TITLE" > $DIR/$timestamp
-echo "" >> $DIR/$timestamp
-echo "" >> $DIR/$timestamp
-vim $DIR/$timestamp
+touch $DIR/$timestamp.md
+echo "# $TITLE" > $DIR/$timestamp.md
+echo "" >> $DIR/$timestamp.md
+echo "" >> $DIR/$timestamp.md
+vim $DIR/$timestamp.md
