@@ -1,0 +1,21 @@
+#!/bin/bash
+
+timestamp=$(date +"%Y%m%d%H%M%S")
+
+DIR=/home/metta/git/zettel/$timestamp
+TITLE=$1
+
+if [[ $# -eq 0 ]]; 
+then
+	echo "Give this zet a title."
+	exit 1
+fi
+
+echo "Zet title: $TITLE"
+
+mkdir -p $DIR
+touch $DIR/$timestamp
+echo "# $TITLE" > $DIR/$timestamp
+echo "" >> $DIR/$timestamp
+echo "" >> $DIR/$timestamp
+vim $DIR/$timestamp
